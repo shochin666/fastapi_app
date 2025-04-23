@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Memo App</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Memo App</h1>
+        <div class="form-container">
+            <h2 id="formTitle">メモの作成</h2>
+            <form id="createMemoForm">
+                <div>
+                    <label for="title">タイトル</label>
+                    <input
+                        type="text"
+                        id="title"
+                        placeholder="タイトルを入力"
+                        required
+                    />
+                </div>
+                <div>
+                    <label for="description">詳細</label>
+                    <textarea
+                        id="description"
+                        placeholder="詳細を入力"
+                    ></textarea>
+                </div>
+                <div class="button-container">
+                    <button type="submit">新規登録</button>
+                    <button
+                        type="button"
+                        id="updateButton"
+                        style="display: none"
+                    >
+                        更新実行
+                    </button>
+                </div>
+            </form>
+        </div>
+        <hr />
+        <table id="memos">
+            <thead>
+                <tr>
+                    <th>タイトル</th>
+                    <th>詳細</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- JSにより、メモが追加される -->
+            </tbody>
+        </table>
+        <script src="app.js"></script>
+    </body>
+</html>
